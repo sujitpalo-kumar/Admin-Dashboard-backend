@@ -1,24 +1,35 @@
 const express = require('express')
-const app = express()
 const mongoose = require('mongoose')
-const dotenv = require('dotenv')
+const apiroute = require('./routes/auth')
 const cors = require('cors')
-const apiRoute = require('./route/route')
+const dotenv = require('dotenv')
+// Initialize the application
+const app = express()
 
-port=8080;
+// setup server port
+const port = 8080
+
+app.get("/", (req,res) =>{
+    res.send("running app")
+})
 
 app.use(express.json(),cors())
 
-app.use('/app/user', apiRoute)
+
+// send message for your localhost
+app.use('/api/users', apiroute)
 
 dotenv.config()
 
-
-mongoose.connect(process.env.DB_CONNECT, {useNewUrlParser: true})
-.then(()=>{
-    console.log('connected to database')
+mongoose.connect(process.env.DB_CONNECT, {useNewUrlParser:true} )
+.then(() =>{
+    console.log('Database Connected')
 }).catch(err => console.log(err))
 
-app.listen(port,() =>{
-    console.log(`backend is running on http://localhost:${port}`)
-} )
+
+
+
+// Launch the admin dashbord system  backend app
+app.listen(port, () =>{
+    console.log(`running app on port: 'http://localhost:${port}/`)
+})

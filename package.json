@@ -1,7 +1,7 @@
 {
-  "name": "login-backend",
+  "name": "admsystem--backend",
   "version": "1.0.0",
-  "description": "user login and signup",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "start": "nodemon index.js",
@@ -9,20 +9,21 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Nitesh9609/login-backend.git"
+    "url": "git+https://github.com/rajni3541/admsystem--backend.git"
   },
-  "author": "nitesh",
+  "author": "rajni",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/Nitesh9609/login-backend/issues"
+    "url": "https://github.com/rajni3541/admsystem--backend/issues"
   },
-  "homepage": "https://github.com/Nitesh9609/login-backend#readme",
+  "homepage": "https://github.com/rajni3541/admsystem--backend#readme",
   "dependencies": {
     "@hapi/joi": "^17.1.1",
     "bcryptjs": "^2.4.3",
     "cors": "^2.8.5",
     "dotenv": "^16.0.1",
     "express": "^4.18.1",
+    "express-validator": "^6.14.0",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^6.3.3",
     "nodemon": "^2.0.16"
